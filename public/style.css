@@ -1,0 +1,527 @@
+
+/* style.css */
+
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the body and header */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header styling */
+header {
+    width: 100%;
+    background-color: #004080;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    animation: fadeIn 1s ease-in;
+    padding: 10px 0; /* Add padding */
+    font-weight: bold; /* Make it bold */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+
+/* Navigation styling */
+.nav {
+    margin-top: 20px;
+}
+
+.nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #004080;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #004080;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav a:hover {
+    background-color: #004080;
+    color: #fff;
+}
+
+/* Main container styling */
+.home-container {
+    margin: 30px;
+    text-align: center;
+}
+
+.home-container h2 {
+    font-size: 2rem;
+    color: #004080;
+    margin-bottom: 15px;
+}
+
+.home-container p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Suggestions section styling */
+.suggestions {
+    background-color: #e0e7ff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+.suggestions h2 {
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.icon-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+.icon-list li {
+    margin: 10px 0;
+}
+
+/* Animation for side-by-side images */
+.animated-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+    animation: scrollImages 6s infinite linear;
+}
+
+.animated-images img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+@keyframes scrollImages {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100%); }
+}
+
+/* App download suggestion styling */
+.app-download {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    background-color: #e0f7f7;
+    border-top: 3px solid #004080;
+}
+
+.app-download h2 {
+    font-size: 1.8rem;
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.app-download p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.app-download .download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #004080;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.app-download .download-btn:hover {
+    background-color: #003060;
+}
+
+input[type="text"], input[type="password"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Dashboard Styles */
+
+/* Dashboard container */
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 100px;
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/156/214/373/background-banking-banknote-bill-wallpaper-preview.jpg');
+    background-size: cover; /* Make the background image cover the entire body */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
+}
+
+/* Balance Display */
+#balance {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    background-color: #bdcd9c; color: rgb(52, 62, 174); border-radius: 5px;
+    padding: 10px;
+    border: #0056b3;
+}
+
+/* Low Balance Alert */
+#lowBalanceAlert {
+    font-size: 1rem;
+    color: #ff0000;
+    font-weight: bold;
+    display: none; /* Initially hidden */
+    margin-top: 5px;
+}
+
+/* Navigation List in Dashboard */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 15px 0;
+}
+
+ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: 1.1rem;
+    color: #004080;
+    background-color: #e6f0ff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+ul li a:hover {
+    background-color: #004080;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Loan Application Form */
+#loanOption button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+#loanOption button:hover {
+    background-color: #0056b3;
+}
+
+/* Loan Form Styling */
+#loanForm {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#loanApplicationForm label {
+    font-weight: bold;
+    margin-top: 15px;
+    display: block;
+}
+
+#loanApplicationForm input[type="number"],
+#loanApplicationForm input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Loan Status */
+#loanStatus {
+    font-size: 1rem;
+    font-style: italic;
+    color: #007bff;
+    margin-top: 10px;
+}
+
+/* Logout Button */
+#logoutBtn {
+    background-color: #e63946;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#logoutBtn:hover {
+    background-color: #b3202e;
+}
+/* Container for login form */
+.container1 {
+    max-width: 400px;
+    width: 100%;
+    margin: 100px auto;
+    padding: 40px;
+    background-image:url('https://t3.ftcdn.net/jpg/04/39/13/60/360_F_439136084_fKgadjwAYOpZzJfAiqfxJt1dRv3YOl6u.jpg'); /* White background for better contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Form title */
+.container1 h2 {
+    font-size: 1.8rem;
+    color: #157de4;
+    margin-bottom: 20px;
+}
+
+/* Input fields styling */
+.container1 input[type="text"],
+.container1 input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.container1 input[type="text"]:focus,
+.container1 input[type="password"]:focus {
+    border-color: #004080;
+    outline: none;
+}
+
+/* Login button styling */
+.container1 button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #2e2929;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.container1 button:hover {
+    background-color: #0056b3;
+}
+
+/* Message styling */
+#message {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: red;
+}
+
+/* Register link styling */
+.container1 p {
+    font-size: 1rem;
+    margin-top: 20px;
+    color: #555;
+}
+
+.container1 a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container1 a:hover {
+    text-decoration: underline;
+}
+/* Basic styling for transaction history container */
+.container2 {
+    max-width: 800px; /* Set a maximum width for the container */
+    margin: 40px auto; /* Center the container */
+    padding: 20px; /* Add padding */
+    background-color: #ffffff; /* White background for better contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Title styling */
+.container2 h2 {
+    font-size: 2rem; /* Increase font size for the title */
+    color: #004080; /* Primary color */
+    margin-bottom: 20px; /* Space below the title */
+    text-align: center; /* Center the title */
+}
+
+/* Transaction list styling */
+#transactionList {
+    font-size: 1.1rem; /* Increase font size */
+    color: #333; /* Dark text color for readability */
+    margin-bottom: 30px; /* Space below the transaction list */
+}
+
+/* Individual transaction entry styling */
+.transaction {
+    border: 1px solid #ccc; /* Light border around each transaction */
+    padding: 15px; /* Padding inside each transaction */
+    margin-bottom: 10px; /* Space between transactions */
+    border-radius: 5px; /* Slightly rounded corners */
+    background-color: #f9f9f9; /* Light grey background */
+}
+
+/* Back to Dashboard button styling */
+button {
+    padding: 10px 15px; /* Button padding */
+    background-color: #007bff; /* Button color */
+    color: #fff; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1.1rem; /* Increase font size */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Loading message styling */
+#transactionList.loading {
+    font-style: italic; /* Italic for loading text */
+    color: #666; /* Lighter color for loading */
+    text-align: center; /* Center align loading message */
+}
+/* Basic styling for the deposit funds container */
+.container-depo {
+    max-width: 8500px; /* Set a maximum width for the container */
+    margin: 40px auto; /* Center the container */
+    padding: 35px; /* Add padding */
+    background-image:url('https://t3.ftcdn.net/jpg/04/39/13/60/360_F_439136084_fKgadjwAYOpZzJfAiqfxJt1dRv3YOl6u.jpg'); /* White background for better contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(18, 159, 215, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center align text */
+}
+
+/* Title styling */
+.container-depo h2 {
+    font-size: 2rem; /* Increase font size for the title */
+    color: #1784f0; /* Primary color */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+/* Input field styling */
+#depositAmount {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding for comfort */
+    margin: 10px 0; /* Space around the input */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.1rem; /* Increase font size */
+}
+
+/* Button styling */
+button {
+    padding: 10px 15px; /* Button padding */
+    background-color: #007bff; /* Button color */
+    color: #33322e; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1.1rem; /* Increase font size */
+    margin: 10px 0; /* Space around buttons */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Deposit message styling */
+#depositMessage {
+    margin-top: 15px; /* Space above the message */
+    font-size: 1rem; /* Standard font size */
+    color: #007bff; /* Primary color for success message */
+    text-align: center; /* Center align message */
+}
+
+/* Back to Dashboard button styling */
+button:last-of-type {
+    background-color: #ccc; /* Grey background for the back button */
+}
+
+button:last-of-type:hover {
+    background-color: #aaa; /* Darker grey on hover */
+}
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 30px; /* To make space for the icon */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+

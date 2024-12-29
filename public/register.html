@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Bank Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+    body{
+        background-color:rgb(125, 191, 217);
+    }</style>
+    <div class="container-depo">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <label style="color: azure;" for="regUsername">Username:</label>
+            <input type="text" id="regUsername" required>
+            
+            <label style="color: azure;" for="regPassword">Password:</label>
+            <div class="password-container">
+                <input type="password" id="regPassword" required>
+                <span class="toggle-password" onclick="togglePassword('regPassword', this)">🙈</span>
+            </div>
+            
+            <label style="color: azure;" for="confirmPassword">Confirm Password:</label>
+            <div class="password-container">
+                <input type="password" id="confirmPassword" required>
+                <span class="toggle-password" onclick="togglePassword('confirmPassword', this)">🙈</span>
+            </div>
+
+            <button type="submit">Register</button>
+            <p style="color: azure;">Already have account? <a href="login.html">login here</a></p>
+        </form>
+        <div id="message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

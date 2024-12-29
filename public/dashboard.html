@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Bank Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background: linear-gradient(to bottom right, #5489c7, #2a659a); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);">
+    <div class="container">
+        <h2 style="margin-top: -10px;">
+            <button style="margin-left: -4px; padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; 
+                    transition: transform 0.2s, background-color 0.2s;" 
+                    onmouseover="this.style.transform='scale(1.1)'; this.style.backgroundColor='#0056b3';"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundColor='#007bff';">
+                Dashboard
+            </button>
+        </h2>
+        <!-- Example of HTML to display the username -->
+
+        <!-- Balance Display with Low Balance Alert -->
+        <p style="margin-top: 15px;" id="balance">
+           Loading balance...
+        </p>
+        
+        <p id="lowBalanceAlert" style="color: red; display: none;">⚠️ Your balance is low!</p>        
+        
+        <ul>
+            <li><a href="transactions.html">📊 Transaction History</a></li>
+            <li><a href="deposit.html">💰 Deposit Funds</a></li>
+            <li><a href="withdraw.html">💸 Withdraw Funds</a></li>
+            <li><a href="transfer.html">💳 Transfer Funds</a></li>
+        </ul>
+
+        <!-- Loan Application Section -->
+        <div id="loanOption">
+            <button onclick="toggleLoanForm()">Apply for Loan</button>
+            <div id="loanForm" style="display: none;">
+                <h2>Loan Application Form</h2>
+                <form id="loanApplicationForm">
+                    <label for="loanAmount">Loan Amount:</label>
+                    <input type="number" id="loanAmount" required>
+
+                    <label for="loanPurpose">Loan Purpose:</label>
+                    <input type="text" id="loanPurpose" required>
+                    
+                    <label for="loanTerm">Loan Term (years):</label>
+                    <input type="number" id="loanTerm" required>
+
+                    <!-- Document Upload Fields -->
+                    <label for="incomeProof">Income Proof:</label>
+                    <input type="file" id="incomeProof" required>
+
+                    <label for="addressProof">Address Proof:</label>
+                    <input type="file" id="addressProof" required>
+
+                    <label for="idProof">ID Proof:</label>
+                    <input type="file" id="idProof" required>
+
+                    <button type="submit">Submit Application</button>
+                </form>
+                <p id="loanStatus"></p>
+            </div>
+        </div>
+
+        <button id="logoutBtn">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

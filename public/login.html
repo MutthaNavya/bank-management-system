@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Bank Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        body {
+            background-color: rgb(125, 191, 217);
+        }
+        .password-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .password-container input {
+            width: 100%;
+            padding: 10px;
+            padding-right: 40px; /* Add space for the icon */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .password-toggle {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 1.2em;
+            color: #555;
+        }
+    </style>
+    <div class="container1">
+        <h2>Login</h2>
+        <form id="loginForm" autocomplete="on">
+            <input type="text" id="loginUsername" placeholder="Username" required autocomplete="username">
+            
+            <!-- Password field with toggle icon -->
+            <div class="password-container">
+                <input type="password" id="loginPassword" placeholder="Password" required autocomplete="current-password">
+                <span id="togglePassword" class="password-toggle">🙈</span> <!-- Eye icon -->
+            </div>
+            
+            <button type="submit">Login</button>
+        </form>
+        <div id="message"></div>
+        <p style="color: azure;">Don't have an account? <a href="register.html">Register here</a></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
