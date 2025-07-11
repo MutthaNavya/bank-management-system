@@ -26,5 +26,3 @@ A full-stack Bank Management System built using Node.js, Express, MongoDB, and H
 
 ---
 
-## 📂 Project Structure
-
